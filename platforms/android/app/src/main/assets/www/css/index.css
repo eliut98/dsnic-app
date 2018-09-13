@@ -1,0 +1,242 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    margin: 0px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow-x: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
+    font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.color{
+    color: #7f8c8d;
+}
+
+.fa.size-36{font-size: 36px; transition: all .3s ease}
+
+/* Nav Bottom */
+#nav-bottom{
+    box-sizing: border-box;
+    background: #ffffff;
+    min-width: 100%;
+    height: 8%;
+    padding: 0px 10%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+}
+
+#nav-bottom a.home{
+    color: #3498db;
+}
+
+#nav-bottom a{
+    color: #000000;
+}
+
+#nav-bottom a:hover{
+    color: #3498db;
+    cursor: pointer;
+}
+
+.box {
+    border-radius: 4px;
+    margin: 2em auto 2em auto;
+    background: #ffffff;
+    text-align: center;
+    width: 90%;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.box .image img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+}
+
+.inner h3{
+    columns: #000000;
+}
+
+.inner p{
+    color: #444444;
+}
+
+a.button {
+    background-color: #3498db;
+    border-radius: 4px;
+    border: 0;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    height: 2.85em;
+    width: 60%;
+    line-height: 2.95em;
+    padding: 0 1.5em;
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#principal-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15%;
+}
+
+#principal-main h1{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+@media screen and (orientation:landscape) {
+    
+    #nav-bottom{
+        padding: 25px 0px;
+    }
+    
+    .box{
+        width: 30%;
+        height: 100%;
+        margin-top: 80px;
+        margin-bottom: 5em;
+    }
+
+    .box:last-child{
+        margin-bottom:  0;
+    }
+
+    #principal-main{
+        flex-direction: row;
+    }
+
+    #principal-main h1{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+ }
+
+#settings{
+     width: 85%;
+     height: 100%;
+     background: #ffffff;
+     padding-top: 15%;
+     position: fixed;
+     top: 0;
+     left: -125%;
+ }
+
+#barra{
+     background: #000000;
+     position: fixed;
+     top: 0;
+     right: 0%;
+     width: 100%;
+     height: 100%;
+     display: none;
+     opacity: .5;
+ }
+
+ #settings h1,span{
+     padding-left: 5%;
+ }
+
+ #settings h5{
+    padding: 5%;
+    color: #3498db;
+    border-top: 1px solid #dddddd50;
+    border-bottom: 1px solid #dddddd50;
+ }
+
+ #btnEspañol, #btnIngles{
+    margin-left: 5%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+ }
+
+ #btnEspañol{
+    border-color: #2c3e50;
+}
+
+ #settings ul{
+     list-style: none;
+     padding-left: 5%;
+ }
+
+ #settings i{
+     width: 15px;
+     text-align: center;
+     margin-left: 10px;
+ }
+
+ #settings p{
+    padding: 5% 0;
+    border-top: 1px solid #dddddd50;
+ }
+
+#settings a{
+    text-decoration: none;
+    color: #3498db;
+}
+
+.landscape{
+    display: none;
+}
+
+ @media only screen and (orientation:landscape){
+
+    body{
+        overflow: hidden;
+    }
+
+    .landscape{
+        background-color: #ffffff;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+   
+    .landscape .cont{
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        transform: translate(-50%);
+    }
+   
+    .landscape .cont img{
+        height: 100px;
+    }
+ }

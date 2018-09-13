@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cultura</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body id="scroll-disabled">
+
+  <div id="container" class="cultura"></div>
+
+  <script id="cultura" type="text/x-handlebars-template">
+    {{#each cultura}}
+    <div class="question-detail">
+      <header>
+        <div class="icons-detail">
+          <a href="home.html" class="exit">
+            <span>salir</span>
+            <span class="text">✖</span>
+          </a>
+          <div class="title">
+            <h1>Cultura</h1>
+          </div>
+          <div class="score">
+            <span>puntos</span>
+            <span class="number">0</span>
+          </div>
+        </div>
+        <div class="question-dialog">
+          <p class="content">{{question}}</p>
+        </div>
+      </header>
+      <div class="answers">
+        {{#each answers}}
+        <button class="btn btn-secondary {{type}}">{{value}}</button>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <div class="final">
+    <p class="final-score">0</p>
+    <span>Puntos</span>
+    <a href="home.html" class="btn btn-blue">Volve al Menú</a>
+  </div>
+
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/handlebars.min.js"></script>
+  <script src="data/cultura.js"></script>
+  <script src="../../assets/js/game.js"></script>
+
+</body>
+
+</html>

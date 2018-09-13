@@ -1,0 +1,359 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+*{
+    overflow: hidden;
+}
+
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    background-color: #3498db;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
+    font-family: Montserrat-Regular;
+}
+
+
+h1,h2,h3,h4,h5{
+    margin: 0px;
+}
+
+p{
+    font-family: Montserrat-Regular;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+button{
+    border: 0;
+    outline: 0;
+    font-family: Montserrat-Regular;
+    font-weight: lighter;
+}
+
+/**********/
+
+.categoria{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 12px 0px;
+    width: 300px;
+    height: 60px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.categoria h4{
+    position: relative;
+    top: 25%;
+}
+
+#portada a:hover .categoria,
+#portada a:focus .categoria,
+#aleatorio:hover,
+#aleatorio:focus
+{
+    box-shadow: none;
+}
+
+@keyframes animar{
+    0% {transform: scale(3);}
+    50% {transform: scale(6) rotate(90deg);}
+    100% {transform: scale(50) rotate(90deg);}
+}
+
+.animar{
+   animation: animar 2s;
+   position: relative;
+   z-index: 10;
+}
+
+.categoria.hist{
+    background-color: #e74c3c;
+    -webkit-box-shadow: 0 3px 0 #e74c3c50, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 0 #e74c3c50, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.categoria.geo{
+    background-color: #43afd9;
+    -webkit-box-shadow: 0 3px 0 #43afd950, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 0 #43afd950, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.categoria.cult{
+    background-color: #8e44ad;
+    -webkit-box-shadow: 0 3px 0 #8e44ad50, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 0 #8e44ad50, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.categoria.lit{
+    background-color: #f1c40f;
+    -webkit-box-shadow: 0 3px 0 #f1c40f50, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 0 #f1c40f50, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+#aleatorio{
+    background-color: #535253;
+    -webkit-box-shadow: 0 3px 0 #53525350, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 0 #53525350, 0 5px 5px rgba(0,0,0,0.6);
+    width: 300px;
+    height: 40px;
+    padding-top: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#aleatorio img{
+    float: left;
+    margin-left:  23%;
+}
+
+#aleatorio h4{
+    line-height: 30px;
+    margin-right: 50px;
+}
+
+/****/
+
+#portada{
+    background-color: #3498db;
+    min-width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    font-size: 1em;
+    position: absolute;
+}
+
+#portada a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#portada h1{
+    color: #ffffff;
+    background-color: #43afd9;
+    margin: 0px;
+    padding: 10px 0px;
+    letter-spacing: 2px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.principal{
+    width: 100%;
+    height: 100%;
+    padding-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/***********/
+
+.pregunta{
+    background-color: #43afd9;
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pregunta h3{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    line-height: 25px;
+    margin-left: 5%;
+    border-radius: 7px;
+    padding: 5px;
+    width: 90%;
+    height: 25%;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4), inset 0 0 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4), inset 0 0 5px 1px rgba(0,0,0,0.3);
+    background-color: #ffffff;
+    color: #444444;
+}
+
+.pregunta button{
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    margin: 15px 0px;
+    width: 90%;
+    height: 10%;
+    cursor: pointer;
+    color: #333;
+    border-radius: 12px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #dbdbdb, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 0 #dbdbdb, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.pregunta button:nth-child(2){
+    margin-top: -40px;
+}
+
+.pregunta button:hover,
+.pregunta button:focus{
+    box-shadow: none;
+}
+
+.pregunta.next{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pregunta.next .correcta{
+    color: #27ae60;
+    font-size: 30px;
+}
+
+/**********/
+
+.puntuacion{
+    background-color: #43afd9;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.puntuacion h1{
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.puntuacion h2{
+    font-size: 30px;
+}
+
+
+/* The animation code */
+@keyframes bien {
+    0%   {color: greenyellow;}
+    50%  { transform: scale(1.2);}
+    100%  {color: greenyellow;} 
+}
+
+.bien{
+    animation-name: bien;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mal {
+    0%   {transform: rotate(5deg);}
+    25%  {transform: rotate(-5deg);}
+    50%  {transform: rotate(5deg);}
+    75%  {transform: rotate(-5deg);}
+    100%  {transform: rotate(5deg);}
+}
+
+.mal{
+    animation-name: mal;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.puntuacion h3{
+    font-size: 45px;
+    text-shadow: 5px 5px rgba(60,60,60,0.3);
+}
+
+.puntuacion a{
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 15px 0px 20% 5%;
+    padding: 5px 10px;
+    width: 50%;
+    height: 10%;
+    cursor: pointer;
+    color: #333;
+    border-radius: 12px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #dbdbdb, 0 5px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 0 #dbdbdb, 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.puntuacion a:hover, 
+.puntuacion a:focus{
+    box-shadow: none;
+}
+
+.puntuacion{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.puntuacion h1{padding: 25% 5px 0% 5px;}
+
+/********/
+
+#juego h5{
+    margin: 0px;
+    font-size: 20px;
+}
+
+#juego .titulo-categoria{
+    position: absolute;
+    top: 0;
+    z-index: 22;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    top: 0;
+    z-index: 3;
+    color: #ffffff;
+    background-color: #43afd9;
+    padding: 10px 0px;
+    letter-spacing: 2px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#juego .historia,
+#juego .cultura,
+#juego .geografia,
+#juego .literatura,
+#juego .puntuacion
+{display: none;}

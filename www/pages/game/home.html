@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body id="scroll-disabled">
+
+    <div class="game-home">
+        <div class="title1">
+            <h1>Trivia</h1>
+        </div>
+        <a href="historia.html" class="btn btn-red">HISTORIA</a>
+        <a href="geografia.html" class="btn btn-blue">GEOGRAFÍA</a>
+        <a href="cultura.html" class="btn btn-purple">CULTURA</a>
+        <a href="literatura.html" class="btn btn-yellow">LITERATURA</a>
+        <a href="../../index.html" class="btn">❌</a>
+    </div>
+
+    <script src="../../assets/js/jquery.min.js"></script>
+
+    <script>
+        let options = $('.game-home a');
+
+        function change_to_english() {
+            options[0].innerText = 'HISTORY';
+            options[1].innerText = 'GEOGRAPHY';
+            options[2].innerText = 'CULTURE';
+            options[3].innerText = 'LITERATURE';
+        }
+
+        function change_to_spanish() {
+            options[0].innerText = 'HISTORIA';
+            options[1].innerText = 'GEOGRAFÍA';
+            options[2].innerText = 'CULTURA';
+            options[3].innerText = 'LITERATURA';
+        }
+
+        if (localStorage.getItem('lang') === 'english') {
+            change_to_english();
+        } else {
+            change_to_spanish();
+        }
+    </script>
+
+</body>
+
+</html>
