@@ -1,8 +1,4 @@
-$('.final').hide();
-
 $(function () {
-
-  $('.final').show();
 
   let score = 0;
 
@@ -14,6 +10,7 @@ $(function () {
     setTimeout(() => {
       $(this).parent().parent().hide();
     }, 1000);
+    $('.final').css('display', 'flex');
   });
 
   $('.error').click(function () {
@@ -75,6 +72,7 @@ $(function () {
   } else {
     change_to_spanish();
   }
+
 
 
 });

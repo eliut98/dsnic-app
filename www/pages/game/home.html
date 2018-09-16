@@ -19,12 +19,52 @@
         <a href="geografia.html" class="btn btn-blue">GEOGRAFÍA</a>
         <a href="cultura.html" class="btn btn-purple">CULTURA</a>
         <a href="literatura.html" class="btn btn-yellow">LITERATURA</a>
+        <a href="#" class="btn btn-success" id="altio">ALEATORIO</a>
         <a href="../../index.html" class="btn">❌</a>
     </div>
 
     <script src="../../assets/js/jquery.min.js"></script>
 
     <script>
+        document.addEventListener("backbutton", onBackKeyDown, false);
+
+        function onBackKeyDown() {
+            window.open('../../index.html');
+        }
+
+        let nRandom = Math.floor((Math.random() * 4) + 1);
+
+        $('#altio').click(function () {
+
+            switch (nRandom) {
+                case 1:
+                    $('.btn-red').addClass('open');
+                    setTimeout(() => {
+                        window.open('historia.html');
+                    }, 1000);
+                    break;
+                case 2:
+                    $('.btn-blue').addClass('open');
+                    setTimeout(() => {
+                        window.open('geografia.html', '_self');
+                    }, 1000);
+                    break;
+                case 3:
+                    $('.btn-purple').addClass('open');
+                    setTimeout(() => {
+                        window.open('cultura.html', '_self');
+                    }, 1000);
+                    break;
+                case 4:
+                    $('.btn-yellow').addClass('open');
+                    setTimeout(() => {
+                        window.open('literatura.html', '_self');
+                    }, 1000);
+                    break;
+            }
+        });
+
+
         let options = $('.game-home a');
 
         function change_to_english() {

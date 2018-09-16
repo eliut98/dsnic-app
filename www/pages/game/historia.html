@@ -18,7 +18,7 @@
     <div class="question-detail">
       <header>
         <div class="icons-detail">
-          <a href="../index.html" class="exit">
+          <a href="home.html" class="exit">
             <span>salir</span>
             <span class="text">✖</span>
           </a>
@@ -53,6 +53,14 @@
   <script src="../../assets/js/handlebars.min.js"></script>
   <script src="data/historia.js"></script>
   <script src="../../assets/js/game.js"></script>
+
+  <script>
+      document.addEventListener("backbutton", onBackKeyDown, false);
+  
+      function onBackKeyDown() {
+        window.open('home.html');
+      }
+    </script>
 
 </body>
 
